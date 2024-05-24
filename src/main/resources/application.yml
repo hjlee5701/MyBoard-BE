@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testboard?characterEncoding=UTF-8&serverTimezone=UTC
+    # &jdbcCompliantTruncation=false&allowMultiQueries=true
+    username: root
+    password: K2systems1!
+#mysql
+#K2systems1!
+    config:
+      activate:
+        on-profile: local
+    devtools:
+      livereload:
+        enabled: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.k2.testBoard.board.dto
+
+  # com.toms.app.*.dto, com.toms.app.admin.*.dto,
